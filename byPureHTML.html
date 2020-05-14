@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            .flex-direction-column{
+                display: flex;
+                flex-direction: column;
+            }
+            .flex-direction-row {
+                display: flex;
+                justify-content: space-between;
+            }
+            .element-margin-top {
+                margin-top: 10px;
+            }
+        </style>
+        <link rel="stylesheet" href="styles/commonStyles.css">
+    </head>
+    <body>
+        <div class="navigation">
+            <a href="#">Go to pure HTML page</a>
+            <span>|</span>
+            <a href="byShadowDom.html">Go to ShadowDOM page</a>
+            <span>|</span>
+            <a href="hybirdsWithPureHTMLAndShadowDom.html">Go to Hybirds - ShadowDOM and Pure HTML page</a>
+            <span>|</span>
+            <a href="byCustomElement.html">Go to Custom Element page</a>
+            <span>|</span>
+            <a href="byTemplate.html">Go to Template page</a>
+        </div>
+        <hr/>
+
+        <div class="flex-direction-column">
+            <div class="flex-direction-row">
+                <fieldset>
+                    <legend>
+                        <h3>Forms related Tags - input</h3>
+                    </legend>
+                    <p>
+                        <span>
+                            (button,checkbox,color,date,datetime-local,email,file,image,month,number)
+                        </span>
+                        <br>
+                        <span>
+                            (password,radio,range,reset,search,submit,tel,text,time,url,week)
+                        </span>
+                    </p>
+                    <form>
+                        <div class="element-margin-top">
+                            <input type="button" value="Type is Button"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="vehicle1">Checkbox</label><input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="favcolor">Color:</label><input type="color" id="favcolor" name="favcolor" value="#ff0000"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="birthday">Date:</label><input type="date" id="birthday" name="birthday"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="birthdaytime">Datetime-Local:</label><input type="datetime-local" id="birthdaytime" name="birthdaytime"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="email">Email:</label><input type="email" id="email" name="email"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="myfile">File:</label><input type="file" id="myfile" name="myfile"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="image">Image:</label><input type="image"  id="image" name="image" src="images/img_submit.gif" alt="Submit" width="48" height="48">
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="bdaymonth">Month:</label><input type="month" id="bdaymonth" name="bdaymonth"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="quantity">Number:</label><input type="number" id="quantity" name="quantity" min="1" max="5"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="pwd">Password:</label><input type="password" id="pwd" name="pwd">
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="male">Male</label><input type="radio" id="male" name="gender" value="male"/>
+                            <label for="female">Female</label><input type="radio" id="female" name="gender" value="female"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="vol">Range:</label><input type="range" id="vol" name="vol" min="0" max="50"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="gsearch">Search:</label><input type="search" id="gsearch" name="gsearch"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="phone">Tel:</label><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="fname">Text:</label><input type="text" id="fname" name="fname"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="appt">Time:</label><input type="time" id="appt" name="appt"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="homepage">URL:</label><input type="url" id="homepage" name="homepage"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <label for="week">Week:</label><input type="week" id="week" name="week"/>
+                        </div>
+                        <div class="element-margin-top">
+                            <input type="submit" value="Submit"/>
+                        </div>
+                    </form>
+
+                    <div class="element-margin-top">
+                        <form>
+                            <label for="myEmail">Enter your email:</label><input type="email" id="myEmail" name="myEmail"/><br>
+                            <label for="myName">Enter a Name:</label><input type="text" maxlength="4" id="myName" name="myName"/><br>
+                            <input type="reset" value="Reset">
+                        </form>
+                    </div>
+
+                </fieldset>
+                <fieldset>
+                    <legend><h3>Images tags- (img,map,area,canvas,figcaption,figure,picture,svg)</h3></legend>
+                    <img src="images/smiley.gif" alt="Smiley face" height="42" width="42"/>
+
+                    <p>Click on the image, will go to a new page:</p>
+                    <img src="images/googlePng.png" alt="Workplace" usemap="#workmap"/>
+                    <map name="workmap">
+                        <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.google.com/">
+                        <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.bing.com/">
+                    </map>
+
+                    <p>The canvas element</p>
+                    <canvas id="myCanvas">Your browser does not support the canvas tag.</canvas>
+                    <script>
+                        var c = document.getElementById("myCanvas");
+                        var ctx = c.getContext("2d");
+                        ctx.fillStyle = "#FF0000";
+                        ctx.fillRect(0, 0, 80, 100);
+                    </script>
+
+                    <p>The figure and figcaption element</p>
+                    <figure>
+                        <img src="images/pic_trulli.jpg" alt="Trulli" style="width:10%">
+                        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+                    </figure>
+
+                    <p>The picture element</p>
+                    <picture>
+                        <source media="(min-width: 650px)" srcset="images/img_pink_flowers.jpg">
+                        <source media="(min-width: 465px)" srcset="images/img_white_flower.jpg">
+                        <img src="images/img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+                    </picture>
+
+                    <p>The svg element</p>
+                    <svg width="100" height="100">
+                        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                        Sorry, your browser does not support inline SVG.
+                    </svg>
+                </fieldset>
+                <fieldset>
+                    <legend><h3>Programming - (embed, object, param)</h3></legend>
+
+                    <p>The embed element</p>
+                    <embed type="image/jpg" src="images/pic_trulli.jpg" width="300" height="200">
+
+                    <p>The object element</p>
+                    <object data="images/img_orange_flowers.jpg" width="300" height="200"></object>
+
+                    <p>The param element</p>
+                    <object data="audioVideo/horse.wav">
+                        <param name="autoplay" value="true">
+                    </object>
+                </fieldset>
+            </div>
+
+            <div class="flex-direction-row">
+                <fieldset>
+                    <legend><h3>Table tags</h3></legend>
+                    <p>
+                        (table, caption, th, tr, td, thead, tbody, tfoot, col, colgroup)
+                    </p>
+                    <table>
+                        <caption><button>Caption</button></caption>
+                        <colgroup>
+                            <col span="2" style="background-color: lightblue;">
+                            <col style="background-color: lightgreen;">
+                        </colgroup>
+
+                        <thead>
+                        <tr>
+                            <th>ISBN</th>
+                            <th><Button>Header is button</Button></th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr>
+                            <td>3476896</td>
+                            <td><input type="text"/></td>
+                            <td>$53</td>
+                        </tr>
+
+                        <tr>
+                            <td>5869207</td>
+                            <td><a href="https://admhelp.microfocus.com/tc/en/2020/TruClient.htm">TruClient Help</a></td>
+                            <td>$49</td>
+                        </tr>
+                        </tbody>
+
+                        <tfoot>
+                        <tr>
+                            <td>Sum</td>
+                            <td><input type="text"/></td>
+                            <td>$180</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                </fieldset>
+                <fieldset>
+                    <legend><h3>Semantics</h3></legend>
+                    <p>
+                        (footer, main, section, article, aside, details, dialog, summary, data)
+                    </p>
+
+                    <div class="element-margin-top">
+                        <footer>
+                            <p>Inside the Footer:<a href="https://admhelp.microfocus.com/tc/en/2020/TruClient.htm">TruClient Help</a></p>
+                        </footer>
+                    </div>
+                    <div class="element-margin-top">
+                        <main>
+                            Inside the Main: <input type="text" name="fname3"/>
+                        </main>
+                    </div>
+                    <div class="element-margin-top">
+                        <section>
+                            Inside the Section: <button>Button</button>
+                        </section>
+                    </div>
+                    <div class="element-margin-top">
+                        <article>
+                            Inside the Article: <input type="text" name="fname5"/>
+                        </article>
+                    </div>
+                    <div class="element-margin-top">
+                        <aside>
+                            Inside the Aside: <input type="text"/>
+                        </aside>
+                    </div>
+                    <div class="element-margin-top">
+                        <details>
+                            Inside the Details: <input type="text"/>
+                        </details>
+                    </div>
+                    <div class="element-margin-top">
+                        <dialog>
+                            Inside the Dialog: <input type="text"/>
+                        </dialog>
+                    </div>
+                    <div class="element-margin-top">
+                        <summary>
+                            Inside the Summary: <input type="text"/>
+                        </summary>
+                    </div>
+                    <div class="element-margin-top">
+                        <ul>
+                            <li><data value="21053">This is data1: <input type="text"/></data></li>
+                            <li><data value="21054">This is data2: <input type="text"/></data></li>
+                        </ul>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend><h3>Links tags</h3></legend>
+                    <p>
+                        (a,nav)
+                    </p>
+                    <a href="https://www.google.com/">This is google website</a>
+
+                    <p>The nav element defines a set of navigation links:</p>
+                    <nav>
+                        <a href="https://www.google.com/">Google</a> |
+                        <a href="https://www.bing.com/">Bing</a>
+                    </nav>
+                </fieldset>
+            </div>
+
+            <div class="flex-direction-row">
+                <fieldset>
+                    <legend><h3>Forms related Tags</h3></legend>
+                    <p>
+                        textarea,button,select,optgroup,option,label,fieldset,legend,datalist,output
+                    </p>
+
+                    <div class="element-margin-top">
+                        <label for="ta">Textarea:</label><textarea id="ta" rows="4" cols="20">This is textarea</textarea><br>
+                    </div>
+                    <div class="element-margin-top">
+                        <button type="button" onclick="alert('Hello world!')">Button</button><br>
+                    </div>
+                    <div class="element-margin-top">
+                        <label for="cars1">Select option:</label>
+                        <select id="cars1">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                    </div>
+                    <div class="element-margin-top">
+                        <label for="cars2">Optgroup:</label>
+                        <select id="cars2">
+                            <optgroup label="Swedish Cars">
+                                <option value="volvo">Volvo</option>
+                                <option value="saab">Saab</option>
+                            </optgroup>
+                            <optgroup label="German Cars">
+                                <option value="mercedes">Mercedes</option>
+                                <option value="audi">Audi</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="element-margin-top">
+
+                    </div>
+                    <div class="element-margin-top">
+                        <label for="browser">Datalist:</label>
+                        <input list="browsers" name="browser" id="browser">
+                        <datalist id="browsers">
+                            <option value="Edge">
+                            <option value="Firefox">
+                            <option value="Chrome">
+                            <option value="Opera">
+                            <option value="Safari">
+                        </datalist>
+                    </div>
+
+                    <div class="element-margin-top">
+                        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+                            <input type="range" id="a" value="50">100+<input type="number" id="b" value="50">=<output name="x" for="a b"></output>
+                        </form>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend><h3>Lists tags</h3></legend>
+                    <p>
+                        (ul, ol, li, dl, dt, dd)
+                    </p>
+
+                    <div class="element-margin-top">
+                        <ul>
+                            <li><button>Button</button></li>
+                            <li><a href="https://www.bing.com/">Bing</a></li>
+                            <li><input type="text" name="fname"/></li>
+                        </ul>
+                    </div>
+
+                    <div class="element-margin-top">
+                        <ol>
+                            <li><button>Button</button></li>
+                            <li><a href="https://www.bing.com/">Bing</a></li>
+                            <li><input type="text" name="fname"/></li>
+                        </ol>
+                    </div>
+
+                    <div class="element-margin-top">
+                        <dl>
+                            <dt><button>Button</button></dt>
+                            <dd><a href="https://www.bing.com/">Bing</a></dd>
+                            <dt><input type="text" name="fname2"/></dt>
+                            <dd><input type="week" name="week2"/></dd>
+                        </dl>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend><h3>Audio/Video tags</h3></legend>
+                    <p>
+                        (audio,source,video)
+                    </p>
+                    <p>The audio element</p>
+                    <audio controls>
+                        <source src="audioVideo/horse.ogv" type="audio/ogg">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <p>The video element</p>
+                    <video width="320" height="240" controls>
+                        <source src="audioVideo/movie.mp4" type="video/mp4">
+                        <!--<source src="audioVideo/movie.ogv" type="video/ogg">-->
+                        Your browser does not support the video tag.
+                    </video>
+                </fieldset>
+            </div>
+        </div>
+    </body>
+</html>
